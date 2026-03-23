@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学生出席管理系统</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📚 学生出席管理系统</h1>
+    
+    <div class="input-section">
+      <input 
+        type="text" 
+        id="studentName" 
+        placeholder="输入学生姓名..."
+        autocomplete="off"
+      >
+      <button onclick="addStudent()">➕ 添加学生</button>
+    </div>
+
+    <h2>📋 学生名单</h2>
+    <div id="studentsList" class="students-list">
+      <div class="empty-message">暂无学生记录</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
