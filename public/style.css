@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 32px;
+}
+
+h2 {
+  color: #555;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+#studentName {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+#studentName:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+.input-section button {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.input-section button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.input-section button:active {
+  transform: translateY(0);
+}
+
+.students-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.student-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s;
+}
+
+.student-item:hover {
+  background: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.student-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  min-width: 100px;
+}
+
+.student-status {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  min-width: 80px;
+  text-align: center;
+}
+
+.status-unknown {
+  background: #e0e0e0;
+  color: #666;
+}
+
+.status-present {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-absent {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.student-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-present, .btn-absent, .btn-delete {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.btn-present {
+  background: #28a745;
+  color: white;
+}
+
+.btn-present:hover {
+  background: #218838;
+}
+
+.btn-absent {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-absent:hover {
+  background: #c82333;
+}
+
+.btn-delete {
+  background: #999;
+  color: white;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+.btn-delete:hover {
+  background: #777;
+}
+
+.empty-message {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  .student-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .student-info {
+    width: 100%;
+  }
+
+  .student-actions {
+    width: 100%;
+  }
+
+  .btn-present, .btn-absent, .btn-delete {
+    flex: 1;
+  }
+}
